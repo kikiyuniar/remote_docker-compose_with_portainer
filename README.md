@@ -1,4 +1,4 @@
-# remote_docker-compose_with_portainer
+# Remote_docker-compose_with_portainer
 easy way of remote docker-compose using Portainer.io docker management with on one network.
 
 Post in Linkedin : https://www.linkedin.com/in/kikiyuniar/
@@ -110,3 +110,21 @@ $ docker-compose up -d
 > untuk memberikan perintah pull di sebuah folder compose yang telah terpilih dahulu.
 
 ## Remote docker-compose 
+* start semua container yang telah dipasang
+* up docker compose yang telah dipasang
+* buka portainer dengan localhost dan port yang telah diberikan, contoh = localhost:860
+   * lakukan registrasi, memasukkan username dan password
+   * selanjutnya pilih yang local, setelah itu akan masuk di dashboard 
+   * lalu ke Endpoints
+   * add endpoint
+   * masukkan nama, Endpoint URL, Public IP.
+   * kemudian klik update endpoint
+* setelah itu buka PC yang akan mengakses
+* atur DNS di PC lain sesuai dengan Endpoint URL yang telah diberikan. 
+* Done
+
+---
+
+Dari perintah yang telah diberkan di atas akan dapat diakses di pc lain yang telah diberika hakases untuk membuka docker-compose di sebuah satu jaringan yang telah disediakan.
+
+--Terimakasi--
