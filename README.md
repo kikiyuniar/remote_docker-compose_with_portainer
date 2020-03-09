@@ -16,8 +16,9 @@ $ docker run -d -p 860:9000 -v /var/run/docker.sock:/var/run/docker.sock portain
 
 * buat docker-compose yang ingin digunakan dan di akses didalam satu jaringan.*
 example:
-** docker-compose wordpress **
+    * docker-compose wordpress *
 ---
+```txt
 |---wordpress-compose/
 | |
 | |---docker-compose.yml
@@ -32,7 +33,7 @@ example:
 | |   |---nginx/
 | |
 | |---wordpress
-
+```
 ```yml
 nginx:
     image: nginx:latest
