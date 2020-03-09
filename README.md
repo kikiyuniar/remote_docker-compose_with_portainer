@@ -118,7 +118,7 @@ $ docker-compose up -d
    ![Gambar dashboard portainer](https://www.ostechnix.com/wp-content/uploads/2017/01/Portainer-Chromium_004.png)
    * lalu ke Endpoints
    * add endpoint
-   * masukkan nama, Endpoint URL, Public IP.
+   * masukkan nama, Endpoint URL, Public IP. contoh URL = [IP]:[port]
    ![Gambar Add Endpoint](https://user-images.githubusercontent.com/1768054/57790772-0b505f00-7701-11e9-8643-971537614fcc.png)
    * kemudian klik update endpoint
 * setelah itu buka PC yang akan mengakses
