@@ -9,9 +9,9 @@ Langkah pertama yang harus dilakukan adalah :
 *install portainer di dalam satu container.
 example:
 
-```java
+
 $ docker run -d -p 860:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
-```
+
 
 *buat docker-compose yang ingin digunakan dan di akses didalam satu jaringan
 *
