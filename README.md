@@ -14,8 +14,24 @@ $ docker run -d -p 860:9000 -v /var/run/docker.sock:/var/run/docker.sock portain
 ```
 >catatan: 860 merupakan port yang akan di akses untuk membuka halaman portainer yang telah terpasang
 
-* buat docker-compose yang ingin digunakan dan di akses didalam satu jaringan
+* buat docker-compose yang ingin digunakan dan di akses didalam satu jaringan.*
 example:
+** docker-compose wordpress **
+---
+|---wordpress-compose/
+| |
+| |---docker-compose.yml
+| |
+| |---nginx/
+| |   |---wordpress.conf
+| |
+| |---db-data/
+| |
+| |---logs/
+| |   |
+| |   |---nginx/
+| |
+| |---wordpress
 
 ```yml
 nginx:
@@ -56,4 +72,5 @@ wordpress:
     restart: always
 
 ```
+
 * 
