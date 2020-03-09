@@ -5,8 +5,8 @@ Post in Linkedin : https://www.linkedin.com/in/kikiyuniar/
 
 Aku *sedang* belajar **menulis** dengan [markdown](https://en.wikipedia.org/wiki/Markdown).
 
-Langkah pertama yang harus dilakukan adalah :
-*install portainer di dalam satu container.
+Langkah pertama yang harus dilakukan adalah 
+* install portainer di dalam satu container.
 example:
 
 ```html
