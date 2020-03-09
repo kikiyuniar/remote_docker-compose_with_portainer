@@ -3,9 +3,7 @@ easy way of remote docker-compose using Portainer.io docker management with on o
 
 Post in Linkedin : https://www.linkedin.com/in/kikiyuniar/
 
-Aku *sedang* belajar **menulis** dengan [markdown](https://en.wikipedia.org/wiki/Markdown).
-
-Langkah pertama yang harus dilakukan adalah 
+## Langkah pertama yang harus dilakukan adalah memasang portainer dan docker-compose
 * install [portainer](https://www.portainer.io/) di dalam satu container.
 example:
 
@@ -35,6 +33,8 @@ example:
 | |---wordpress
 ```
 ```yml
+docker-compose.yml
+
 nginx:
     image: nginx:latest
     ports:
@@ -71,7 +71,42 @@ wordpress:
     links:
         - mysql
     restart: always
+```
+```conf
+wordpress.conf
+
+server {
+    listen 80;
+    server_name [IP Address];
+
+    root /var/www/html;
+    index index.php;
+
+    access_log /var/log/nginx/nginx-access.log;
+    error_log /var/log/nginx/nginx-error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass wordpress:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+    }
+}
+
 
 ```
 
-* 
+* setelah file docker-compose telah dibuat, selanjutnya berikan perintah: *
+```
+$ docker-compose up -d
+```
+> untuk memberikan perintah pull di sebuah folder compose yang telah terpilih dahulu.
+
+## Remote docker-compose 
